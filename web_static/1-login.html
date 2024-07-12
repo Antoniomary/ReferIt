@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <style>
+      body {
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	background-image: url('images/login/pencil_bg.jpg');
+	background-size: contain;
+	background-repeat: repeat;
+	background-attachment: fixed;
+	background-position: fixed;
+	/*
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	*/
+	overflow: hidden;
+      }
+
+      #form {
+	background-color: white;
+	border-radius: 6px;
+	min-width: 250px;
+	max-width: 300px;
+	/*font-family: Georgia, serif;
+	*/
+      }
+
+      h2 {
+	text-align: center;
+	color: dodgerblue;
+      }
+
+      #username {
+	background-image: url('images/login/user.png');
+      }
+
+      #password {
+	background-image: url('images/login/password.png');
+      }
+
+      #username, #password, #login {
+	width: 200px;
+	height: 40px;
+	border-radius: 30px;
+	border: 2px solid dodgerblue;
+	display: block;
+	box-sizing: border-box;
+	margin: 0 auto;
+      }
+
+      #username, #password {
+	background-repeat: no-repeat;
+	background-size: contain;
+	padding-left: 50px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+      }
+
+      #login {
+	color: white;
+	background-color: dodgerblue;
+	margin-top: 30px;
+	margin-bottom: 30px;
+      }
+
+      #forgot_pass {
+	text-align: center;
+	font-family: "san-serif";
+	font-size: bold;
+	/* font-family: Georgia, serif; */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="form">
+    <form action="/login" method="post">
+      <h2>Contributor Login</h2>
+      <input id="username" type="text" placeholder="Username" name="username" required>
+      <input id="password" type="password" placeholder="Password" name="password" required>
+      <input id="login" type="submit" value="Login">
+      <p id="forgot_pass"><a href="">Forgotten password?</a></p>
+    </form>
+    </div>
+  </body>
+</html>

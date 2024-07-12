@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Bar</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .search-container {
+      display: flex;
+      align-items: center;
+      border: 2px solid #ccc;
+      border-radius: 30px;
+      padding: 5px 10px;
+      width: 400px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .search-container input[type="text"] {
+      border: none;
+      outline: none;
+      padding: 10px;
+      border-radius: 30px;
+      flex: 1;
+      margin-left: 10px;
+    }
+
+    .search-container input[type="text"]::placeholder {
+      white-space: pre; /* Allows placeholder to display in multiple lines */
+    }
+
+    .search-container .search-icon {
+      color: #aaa;
+      font-size: 1.5em;
+    }
+
+    .search-container .search-button {
+      background: none;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      color: #007BFF;
+      font-size: 1.5em;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="search-container">
+    <label for="search" class="search-icon">&#128269;</label>
+    <input id="search" type="text" placeholder="Search by
+    Author, Title, Isbn">
+    <button class="search-button">&#128269;</button>
+  </div>
+</body>
+</html>
+

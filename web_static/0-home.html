@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to ReferIt</title>
+    <style>
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: arial, sans-serif;
+}
+
+body {
+	background: url('images/sunset.jpg') no-repeat;
+	background-size: 100% 100%;
+	background-position: center;
+	min-height: 100vh;
+}
+
+header {
+	width: 100%;
+	height: 70px;
+	border: none;
+	background: transparent;
+	color: white;
+}
+
+#nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 100%;
+	line-height: 100%;
+	padding: 0 2em;
+}
+
+#nav-logo {
+	font-weight: 700;
+	font-size: 18px;
+}
+
+.nav-menu ul {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	gap: 1.5em;
+	list-style-type: none;
+}
+
+.nav-icon {
+	display: none;
+}
+
+.link a {
+	text-decoration: none;
+	color: white;
+	font-weight: 400;
+	padding-bottom: 10px;
+}
+
+.link a:hover {
+	border-bottom: 2px solid white;
+	opacity: .4;
+}
+
+.link a:active {
+	border-bottom: 2px solid dodgerblue;
+	opacity: 1;
+}
+
+.link a:visited {
+	border-bottom: 2px solid dodgerblue;
+	opacity: 1;
+}
+
+#tagline {
+	width: 100%;
+	min-height: 50vmin;
+	border: none;
+}
+
+#tagline img {
+	width: 100%;
+	height: auto;
+}
+
+.search-box {
+	width: 100%;
+	height: 25vmin;
+	background: transparent;
+	position: relative;
+}
+
+#search-wrapper {
+	width: 80%;
+	height: 3em;
+	background-color: white;
+	border-radius: 1.5em;
+	position: relative;
+	box-shadow: -5px 5px 8px 4px rgba(0, 0, 0, .4);
+	/* transition: 2px ease-in-out; */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#search-bar {
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	border-radius: 1.5em;
+	padding-left: 50px;
+	padding-right: 100px;
+	border: none;
+	outline: none;
+}
+
+#search-bar:hover {
+	border: 2px solid dodgerblue;
+}
+
+#search-bar::placeholder {
+	color: dodgerblue;
+	font-weight: 700;
+	opacity: .7;
+}
+
+#search-btn {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 1em;
+	border: none;
+	border-radius: 1.5em;
+	padding: .5em 1.5em;
+	color: white;
+	background: dodgerblue;
+}
+
+#about {
+	background: rgba(255, 255, 255, 0.8);
+	padding: 5em 10em 10em;
+	font-size: .7rem;
+	text-align: justify;
+}
+
+#about h2 {
+	color: dodgerblue;
+	margin-bottom: 1.8rem;
+}
+
+#services {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	text-align: center;
+	outline: none;
+	border: none;
+	flex-wrap: wrap;
+	background: dodgerblue;
+	opacity: .8;
+	width: 100%;
+}
+
+.info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 33%;
+	padding: 1em 2em 2em;
+	text-align: center;
+	border-left: 1px solid white;
+	flex: 1;
+	min-height: 20rem;
+}
+
+.info h2 {
+	color: white;
+	margin-bottom: 1.8rem;
+}
+
+.info p {
+	font-size: 1.2rem;
+	font-weight: 500;
+}
+
+footer {
+	width: 10%;
+	height: 70px;
+}
+
+@media only screen and (max-width: 400px) {
+	.nav-menu {
+		visibility: hidden;
+	}
+
+	#nav {
+		display: flex;
+       		justify-content: center;		
+	}
+
+	.nav-icon {
+		display: initial;
+	}
+
+	.search-box {
+		height: 50vmin;
+	}
+
+	#services {
+		display: block;
+	}
+
+	.info {
+		display: block;
+		width: 100%;
+		padding: 2em 4em 4em;
+		font-size: .7rem;
+		border-bottom: 1px solid white;
+		min-height: 10rem;
+	}
+
+	.info p {
+		font-size: .7rem;
+	}
+
+	#about {
+		padding: 2em 4em 4em;
+	}
+
+	#about h2 {
+		color: dodgerblue;
+		margin-bottom: .9rem;
+	}
+}
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav id="nav">
+        <div id="nav-logo">ReferIt</div>
+	<div class="nav-menu">
+	  <ul>
+	    <li class="link"><a href="#Home">Home</a></li>
+	    <li class="link"><a href="0-login.html">Add a Book</a></li>
+	    <li class="link"><a href="#services">Services</a></li>
+	    <li class="link"><a href="#about">About</a></li>
+	  </ul>
+	</div>
+	<div class="nav-icon">:=:</div>
+      </nav>
+    </header>
+    <div id="tagline">
+      <img src="images/tagline.jpg" alt="tagline: Every Reference Counts">
+    </div>
+    <div class="search-box">
+       <form method="GET" action="http://localhost:5000/api/v1/search">
+      	  <div id="search-wrapper">
+	    <input id="search-bar" type="text" name="q" placeholder="Search by Author, DOI, ISBN, or Title" required>
+	    <button id="search-btn" type="submit">Search</button>
+         </div>
+      	</form>
+    </div>
+    <div id="about">
+      <h2>About Referit</h2>
+      <p>
+      Welcome to <i>Referit</i>, your <strong>go-to citation generator</strong> designed to simplify and enhance your referencing process.<br>
+      At Referit, we understand the importance of proper referencing in academic and professional writing. That is why we want to make the citation process as seamless and stress-free as possible, ensuring you can focus on your content while we help with the citations.<br>
+      Whether you're a <em>student, researcher, or professional</em>, Referit is here to help you create accurate and reliable citations effortlessly.
+      </p>
+    </div>
+    <div id="services">
+      <article class="info search">
+        <h2>Comprehensive Search</h2>
+	<p>Easily search for books by <em>author, ISBN, DOI, or title</em>. Our extensive database ensures you find the exact reference you need.</p>
+      </article>
+      <article class="info add-book">
+        <h2>Community Support</h2>
+	<p>Become a contributor and help expand our database by adding books sources. Together, we can build a richer resource for everyone.</p>
+      </article>
+      <article class="info cite-manually">
+        <h2>Generate Citation</h2>
+	<p>Need to cite a source that's not in our database? No problem! Use our manual citation generation tool to create customized references.</p>
+      </article>
+    </div>
+    <footer>
+     <div class="foot-box">
+     </div>
+    </footer>
+  </body>
+</html>

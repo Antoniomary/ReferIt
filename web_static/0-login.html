@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <style>
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: poppins, arial, san-serif;
+}
+
+body {
+	background: url('images/sunset.jpg') no-repeat;
+	background-size: 100% 100%;
+	background-position: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100dvh;
+}
+
+#wrapper {
+	border: 2px solid black;
+	background: transparent;
+	width: 20rem;
+	border-radius: 10px;
+	border: none;
+	outline: none;
+	padding: 20px;
+	border: 1px solid white;
+	backdrop-filter: blur(10px);
+}
+
+#wrapper h1 {
+	width: 100%;
+	text-align: center;
+	color: dodgerblue;
+	border: none;
+	outline: none;
+	margin-bottom: 10px;
+}
+
+.input-box {
+	width: 100%;
+	height: 50px;
+	margin: 30px auto;
+	position: relative;
+	background: transparent;
+}
+
+#username, #password {
+	width: 100%;
+	height: 50px;
+	border-radius: 40px;
+	padding-left: 50px;
+	padding-right: 50px;
+	border: none;
+	outline: none;
+	opacity: 0.6;
+}
+
+#username:hover, #password:hover {
+	border: 2px solid dodgerblue;
+}
+
+.icon {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%); 
+	left: 10px;
+	width: 25px;
+	height: 25px;
+}
+
+::placeholder {
+	color: dodgerblue;
+	font-weight: 700;
+}
+
+#btn {
+	width: 100%;
+	height: 50px;
+	border-radius: 40px;
+	margin: 40px auto 20px;
+	background-color: dodgerblue;
+	color: white;
+	font-weight: 700;
+	border: none;
+	outline: none;
+	opacity: 0.8;
+	font-size: 18px;
+}
+
+#btn:hover {
+	opacity: 0.6;
+}
+
+#forgot_pass {
+	text-align: center;
+}
+
+#forgot_pass p a{
+	text-decoration: none;
+	color: white;
+	font-size: 18px;
+	font-weight: 500;
+}
+
+#forgot_pass p a:hover {
+	border-bottom: 2px solid black;
+}
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <form action="/login" method="post">
+        <h1>Contributor Login</h1>
+        <div class="input-box">
+	  <img class="icon" src="images/login/user.png">
+          <input id="username" type="text" placeholder="Username" name="username" required>
+	</div>
+        <div class="input-box">
+	  <img class="icon" src="images/login/password.png">
+          <input id="password" type="password" placeholder="Password" name="password" required>
+	</div>
+        <button id="btn" type="submit">Login</button>
+	<div id="forgot_pass">
+          <p><a href="">Forgotten password?</a></p>
+	</div>
+      </form>
+    </div>
+  </body>
+</html>
